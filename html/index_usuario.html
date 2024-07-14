@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Usuario</title>
+    <link rel="stylesheet" href="../estilos/styles_usuario.css">
+</head>
+
+<body>
+    <div class="logo-centrado">
+        <img src="../imagenes/logo.png" alt="logo">
+    </div>
+    <h1>Crear Usuario</h1><br>
+
+    <form id="formulario-usuario">
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br>
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required><br>
+
+        <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required><br>
+
+        <label for="fecha_registro">Fecha de Registro:</label>
+        <input type="date" id="fecha_registro" name="fecha_registro" required><br>
+
+        <label for="id_pais">ID País:</label>
+        <input type="number" id="id_pais" name="id_pais" required><br>
+
+        <label for="id_provincia">ID Provincia:</label>
+        <input type="number" id="id_provincia" name="id_provincia" required><br>
+
+        <label for="id_ciudad">ID Ciudad:</label>
+        <input type="number" id="id_ciudad" name="id_ciudad" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="contraseña">Contraseña:</label>
+        <input type="password" id="contraseña" name="contraseña" required><br>
+
+        <label for="privilegios">Privilegios:</label>
+        <select id="privilegios" name="privilegios">
+            <option value="Usuario">Usuario</option>
+            <option value="Moderador">Moderador</option>
+            <option value="Administrador">Administrador</option>
+        </select><br><br>
+
+        <button type="submit">Crear Usuario</button>
+        <a href="../index__home.html">Menu principal</a>
+    </form>
+
+    <script>
+
+        const URL = "https://SofiaMJuarez.pythonanywhere.com"
+
+        document.getElementById('formulario-usuario').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const formData = {
+                nombre: document.getElementById('nombre').value,
+                apellido: document.getElementById('apellido').value,
+                fecha_nacimiento: document.getElementById('fecha_nacimiento').value,
+                fecha_registro: document.getElementById('fecha_registro').value,
+                id_pais: document.getElementById('id_pais').value,
+                id_provincia: document.getElementById('id_provincia').value,
+                id_ciudad: document.getElementById('id_ciudad').value,
+                email: document.getElementById('email').value,
+                contraseña: document.getElementById('contraseña').value,
+                privilegios: document.getElementById('privilegios').value
+            };
+
+            fetch(URL + 'api/usuarios', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+                .then(function (response) {
+                    if (response.ok) {
+                        return response.json();
+                    } else {
+                        throw new Error('Error al crear el usuario.');
+                    }
+                })
+                .then(function (data) {
+                    alert('Usuario creado correctamente.');
+                })
+                .catch(function (error) {
+                    alert(error.message);
+                })
+                .finally(function () {
+                    document.getElementById('formulario-usuario').reset();
+                });
+        });
+    </script>
+    <script src="../js/script_fecha_registro.js"></script>
+</body>
+</html>

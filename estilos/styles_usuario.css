@@ -1,0 +1,103 @@
+/* Estilos generales */
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('../imagenes/banner.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #022b5e; 
+}
+
+header {
+    height: 100px;
+    background-color: #fcc657; 
+    padding: 0 50px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #fff;
+}
+
+.logo-centrado {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.logo-centrado img {
+    width: 100px;
+    height: auto;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select, button {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ff0844;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #ff0844;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* Estilos responsivos? */
+@media (max-width: 768px) {
+    form {
+        padding: 15px;
+    }
+
+    input, select, button {
+        width: calc(100% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .logo-centrado img {
+        width: 80px;
+    }
+}

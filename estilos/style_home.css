@@ -1,0 +1,337 @@
+*{
+    
+    margin: 0;
+    padding: 0;
+    
+    font-family: "Montserrat", sans-serif;
+}
+body {
+    box-sizing: border-box;
+    background-color: #022b5e; 
+   
+}
+header {
+    height:100px;
+    background-color: #fcc657; 
+    padding: 0 50px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+img {
+    width: 100px;
+}
+.menu  a{
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.4s; 
+}
+.mostrar-menu,
+.esconder-menu {
+    font-size: 30px;
+    cursor: pointer;
+    display: none; 
+    transition: 0.4s;
+}
+.mostrar-menu {
+    order:1;
+}
+.menu a:hover,
+.mostrar-menu:hover,
+.esconder-menu:hover {
+    color: #ff0844;
+}
+#check {
+    display: none;
+}
+
+/* banner */
+#banner {
+    padding: 0px 50px;
+    background-image: url(../imagenes/anime-style-entity-with-fire.jpg); 
+    height: 45vh;
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+}
+#banner::before {
+    content: '';
+    background: #6d8eb61a;
+    position: absolute;
+    width: 100%;
+    height:45vh;
+    left: 0;
+}
+.contenido-banner h1 span{
+    font-size: 30px;
+    font-weight: bolder;
+    padding:10 0px;
+    color: #fff;
+}
+.contenido-banner h1{
+    font-size: 30px;
+    font-weight: 500;
+    padding:10 0px;
+    color: #fff;
+}
+.contenido-banner{
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.button-vermas {
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #ff0844;
+    padding: 10px 36px;
+    margin: 10px;
+    align-self: baseline;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+.button-vermas:hover {
+    background-color: #ff0844;
+}
+/* SECCION CATEGORIAS */
+#categorias {
+    padding: 10px 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+}
+#title {
+    padding: 10px 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #ff0844;
+    margin-top: 0px;
+    padding-bottom: 5px;
+    background-color: #23c3fd;
+}
+#categorias div{
+    padding: 10px 20px;
+    
+    
+}
+#categorias div img{
+    width: 250px;
+}  
+#categorias div img:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 6px 6px 0px #161616ad;
+}
+h4{
+    color: #ff0844;
+    font-size: 30px;
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+    margin-top: 10px;
+}
+.jugar{
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 30px;
+    display: inline-block;
+    border: 2px solid #fcc657;
+    font-weight: bold;
+    margin: 10px;
+    transition: all 0.3s;
+}
+.jugar:hover {
+    background-color: #ff0844;
+    border: none;
+}
+/* contenido seccion nosotros */
+#nosotros{
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    align-items: center;
+}
+
+#titulo{
+    justify-content: center;
+    color: #ff0844;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 0px;
+    padding-bottom: 5px;
+    background-color:#23c3fd;
+}
+.contenido-nosotros div p{
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+#contenido-imagenes {
+    padding: 10px 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    
+
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#commentSection {
+    margin-bottom: 20px;
+}
+
+.comment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e9e9e9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#contenido-carrusel{
+    background-color: #fcc657;
+}
+
+
+h3{
+    color: #ff0844;
+    justify-content: center;
+    font-weight: bolder;
+    font-size: 20px;
+    display: flex;
+}
+/* carrusel */
+.carrusel {
+    max-width: 1100px;
+     display: flex;
+    margin-left: 148px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+    
+  }
+  .carrusel_item img {
+     width: 200px;
+     height: 200px;
+     object-fit: cover;
+     padding: 30px 20px;
+     margin: 20px 20px;
+    
+  }
+ .carrusel_item:hover {
+    transform: scale(1.2); 
+ }
+ footer {
+    background-color: #fcc657;
+}
+.linksfooter2{
+ justify-content: center;
+ text-align: center;
+ padding-top: 12px;
+    
+}
+.linksfooter2 h3{
+    color: #ffff;
+    font-weight: 300;
+    margin: 0%;
+    padding: 0%;
+}
+.linksfooter2 a i {
+font-size: 36px; 
+margin-top: 0; 
+color: #ffff;
+padding: 10px; 
+text-decoration-line: none;
+  
+}
+a{
+    text-decoration: none;
+}
+.linksfooter2 a i:hover{
+    transition: all 0.3s;
+    color: #022b5e;
+}
+.derechos{
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    font-size: 14px;
+    color: #ff0844;
+}
+/* responsive */
+@media(max-width: 768px) {
+    /* header */
+    .mostrar-menu,
+    .esconder-menu{
+        display: block;
+    }
+    .menu{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #022b5e;
+        right: -100%; 
+        top: 0;
+        text-align: center;
+        padding: 100px 0;
+        z-index: 100;
+        transition: 0.8s;
+
+    }
+    .menu a {
+        display: block;
+        padding: 20px;
+    }
+    .esconder-menu {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        display: flex;
+    }
+    #check:checked ~ .menu {
+        right: 0;
+    }
+#categorias {
+    flex-direction: column;
+}
+#contenido-imagenes .imagenes a iframe{
+    width: 200px;
+    height: 150px;
+    
+}
+}
